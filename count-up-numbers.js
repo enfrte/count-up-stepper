@@ -26,7 +26,7 @@ observer.observe(target); // Watch for intersection events on a specific target 
 
 
 
-function getNumbers() {
+function getNumbers(endNums) {
   endNums.forEach(function(endNum) {
     //console.log('endNum.innerHTML:', endNum.innerHTML);
     endNumsArray.push(endNum.innerHTML);
@@ -34,7 +34,7 @@ function getNumbers() {
   });
   //console.log(endNumsArray);
 }
-getNumbers();
+getNumbers(endNums);
 
 function countSetUp(endNumsArray) {
   //console.log(endNumsArray);
