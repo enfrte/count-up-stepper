@@ -1,7 +1,9 @@
 // To setup, change target and endNums to desired selectors. 
 
 const target = document.querySelector("#count-trigger"); // the element you want to target as the trigger
-const endNums = document.querySelectorAll(".foo"); // the selector of the number(s) you want to target 
+const numbersClass = '.foo'; // the css class of the number(s) element you want to target 
+
+const endNums = document.querySelectorAll(numbersClass); 
 const endNumsArray = [];
 
 var observer = new IntersectionObserver(changes => {
@@ -65,11 +67,11 @@ function countUp(endNum, index) {
       startNum += 100000
     }
     if (startNum <= endNum) {
-      document.querySelectorAll(".foo")[index].innerHTML = startNum;
+      document.querySelectorAll(numbersClass)[index].innerHTML = startNum;
       //console.log(startNum);
     } else {
       clearInterval()
-      document.querySelectorAll(".foo")[index].innerHTML = endNum;
+      document.querySelectorAll(numbersClass)[index].innerHTML = endNum;
     }
   }, 10);
 
