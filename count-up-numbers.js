@@ -52,7 +52,7 @@ function countSetUp(endNumsArray) {
 function countUp(endNum, index) {
   let startNum = 0;
   //console.log(endNum, index);
-  setInterval(function() {
+  const interval = setInterval(function() {
     if (endNum < 300) {
       startNum++;
     } else if (endNum < 1000) {
@@ -70,7 +70,7 @@ function countUp(endNum, index) {
       document.querySelectorAll(numbersClass)[index].innerHTML = startNum;
       //console.log(startNum);
     } else {
-      clearInterval()
+      clearInterval(interval)
       document.querySelectorAll(numbersClass)[index].innerHTML = endNum;
     }
   }, 10);
